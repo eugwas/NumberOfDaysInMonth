@@ -1,9 +1,22 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(NumberOfDaysInMonth.isLeapYear(1600));
-        System.out.println(NumberOfDaysInMonth.getDaysInMonth(2,2020));
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of month: ");
+        boolean hasNextInt = scanner.hasNextInt();
+        if (hasNextInt) {
+            int month = scanner.nextInt();
+            System.out.print("Enter the year: ");
+            int year = scanner.nextInt();
+            System.out.println("Days in month = " + NumberOfDaysInMonth.getDaysInMonth(month, year));
+        } else {
+            System.out.println("Invalid number");
+        }
+        scanner.nextLine();
+        scanner.close();
     }
 }
