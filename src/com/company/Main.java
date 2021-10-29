@@ -12,7 +12,9 @@ public class Main {
             int month = scanner.nextInt();
             System.out.print("Enter the year: ");
             int year = scanner.nextInt();
-            System.out.println("Days in month = " + NumberOfDaysInMonth.getDaysInMonth(month, year));
+            NumberOfDaysInMonth numberOfDaysInMonth = new NumberOfDaysInMonth(month, year);
+            System.out.println("Days in month = " + numberOfDaysInMonth.getDaysInMonth(month, year));
+
         } else {
             System.out.println("Invalid number");
         }

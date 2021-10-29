@@ -1,7 +1,15 @@
 package com.company;
 
 public class NumberOfDaysInMonth {
-    public static boolean isLeapYear(int year) {
+    private int month;
+    private int year;
+
+    public NumberOfDaysInMonth(int month, int year) {
+        this.month = month;
+        this.year = year;
+    }
+
+    public boolean isLeapYear(int year) {
         if (year < 1 || year > 9999)
             return false;
         else if (year % 4 != 0)
@@ -11,7 +19,7 @@ public class NumberOfDaysInMonth {
         return true;
     }
 
-    public static int getDaysInMonth(int month, int year) {
+    public int getDaysInMonth(int month, int year) {
         if (month < 1 || month > 12 || year < 1 || year > 9999) {
             System.out.println("Invalid number of the month");
             return -1;
